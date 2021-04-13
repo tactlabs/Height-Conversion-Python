@@ -2,7 +2,8 @@
 from flask import Flask, request, render_template 
   
 # Flask constructor
-app = Flask(__name__)   
+app = Flask(__name__)  
+PORT = 7000
   
 @app.route('/', methods =["GET", "POST"])
 def gfg():
@@ -17,4 +18,4 @@ def gfg():
     return render_template("index.html")
   
 if __name__=='__main__':
-   app.run(port=3001, debug = True)
+   app.run(debug = True,host="0.0.0.0",port = PORT)
